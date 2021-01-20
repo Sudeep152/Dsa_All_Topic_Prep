@@ -2,11 +2,10 @@ package com.company.BitManipulation
 
 fun main(){
 
-    kthBitSetOrNot(6,4)
+  print(kthBitSetOrNot(5,2))
 
 }
-fun kthBitSetOrNot( n:Int,k:Int){
+fun kthBitSetOrNot( n:Int,k:Int): Boolean {
 
-    if(n and (1 shl (k-1)) !=0) print("Set Bit")
-    else print("Not Set Bit")
+    return n and (1 shl (k-1)) !=0
 }
