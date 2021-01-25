@@ -5,6 +5,7 @@ public class Two_Odd_Occurence {
         int [] arr={4,3,4,4,4,5,5,3,1,2};
 
         TwoOdd(arr);
+        System.out.println(9^6);
     }
     static  void  TwoOdd(int [] arr){
 
