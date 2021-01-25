@@ -1,4 +1,4 @@
-package com.company.NaiveSolutions;
+package com.company.BitQustionNaiveSolutions;
 
 public class Power_Of_Two {
     public static void main(String [] args){
