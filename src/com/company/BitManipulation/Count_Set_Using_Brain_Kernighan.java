@@ -5,7 +5,7 @@ public class Count_Set_Using_Brain_Kernighan {
 
         //This is Famous Algorithm Which is called Brain Kernighan
 
-        System.out.println(countBit(1));
+        System.out.println(countBit(222));
     }
     static int countBit(int n){
         int count=0;
@@ -15,4 +15,6 @@ public class Count_Set_Using_Brain_Kernighan {
         }
         return count;
     }
+
+
 }
