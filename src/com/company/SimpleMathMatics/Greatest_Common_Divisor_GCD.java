@@ -1,11 +1,16 @@
 package com.company.SimpleMathMatics;
 
+import java.util.Scanner;
+
 public class Greatest_Common_Divisor_GCD {
     public static  void  main(String  [] args){
 
+        Scanner scanner=new Scanner(System.in);
+       int a =scanner.nextInt();
+        int b=scanner.nextInt();
+        System.out.println(GCD_Naive_Approach(a, b));
+        System.out.println(GCD_Good_Approach(a,b));
 
-        System.out.println(GCD_Naive_Approach(3, 9));
-        System.out.println(GCD_Good_Approach(3,9));
 
     }
 
@@ -43,4 +48,11 @@ public class Greatest_Common_Divisor_GCD {
         return a;
     }
 
+    //Advance Method
+ int GCD_ADVANCE_Approach(int a,int b){
+        if (b==0){
+            return a;
+        }
+        return GCD_ADVANCE_Approach(b,a%b);
+    }
 }
