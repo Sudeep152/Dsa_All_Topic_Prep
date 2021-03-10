@@ -2,35 +2,27 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args)
-    {
-      int[] arr ={1,1,2,3,4,4};
-      occurring(arr);
-    }
-    static  void occurring(int[] arr){
-        
-        int First =0;
-        int second=0;
-        int Xor=0;
-        int rmsb;
+    public static void main(String[] args) {
 
-        for (int i=0;i< arr.length;i++){
-
-            Xor= Xor^i;
-
+        try{
+           final   int a[]=new int[7];
+            a[19]=30/0;
+            System.out.println("First print statement in try block");
         }
-        rmsb=Xor & -Xor;
-        for (int j : arr) {
-
-            if ((rmsb & j) != 0) {
-                First = First ^ j;
-            } else {
-                second = second ^ j;
-            }
-
+        catch(ArithmeticException e){
+            System.out.println("Warning: ArithmeticException");
         }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Warning: ArrayIndexOutOfBoundsException");
+        }
+        catch(Exception e){
+            System.out.println("Warning: Some Other exception");
+        }
+        System.out.println("Out of try-catch block...");
+    }
 
-        System.out.println(First+ ","+second);
+
+
     }
-    }
+
 

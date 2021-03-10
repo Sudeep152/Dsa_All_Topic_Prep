@@ -3,7 +3,7 @@ package com.company.Recursion;
 public class powerRecursionAdvance {
     public static  void main(String [] args){
 
-  System.out.println(power_advance(2,5));
+  System.out.println(power_advance(361,163));
 
     }
     static  int power_advance(int n,int p){
