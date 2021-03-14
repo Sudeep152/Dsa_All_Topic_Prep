@@ -4,25 +4,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try{
-           final   int a[]=new int[7];
-            a[19]=30/0;
-            System.out.println("First print statement in try block");
-        }
-        catch(ArithmeticException e){
-            System.out.println("Warning: ArithmeticException");
-        }
-        catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Warning: ArrayIndexOutOfBoundsException");
-        }
-        catch(Exception e){
-            System.out.println("Warning: Some Other exception");
-        }
-        System.out.println("Out of try-catch block...");
+        Toh(3,'A','B','C');
+
     }
+    static void  Toh(int n,char A,char B ,char C){
+
+        if (n==1){
+            System.out.println("Disk "+n +" move "+A+" to "+ C);
+            return;
+        }
+        Toh(n-1,A,C,B);
+        System.out.println("Disk "+n + " move " + A + " to " +C);
+        Toh(n-1,B,A,C);
 
 
 
+
+
+    }
     }
 
 
