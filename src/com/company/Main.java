@@ -1,27 +1,24 @@
 package com.company;
 
+import java.util.HashMap;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Toh(3,'A','B','C');
-
-    }
-    static void  Toh(int n,char A,char B ,char C){
-
-        if (n==1){
-            System.out.println("Disk "+n +" move "+A+" to "+ C);
-            return;
-        }
-        Toh(n-1,A,C,B);
-        System.out.println("Disk "+n + " move " + A + " to " +C);
-        Toh(n-1,B,A,C);
-
-
-
+        System.out.println("Hello World");
+        HashMap<Integer,String> hmap = new HashMap<Integer, String>();
+        hmap.put(12, "Chaitanya");
+        hmap.put(2, "Rahul");
+        hmap.put(7, "Singh");
+        hmap.put(49, "Ajeet");
+        hmap.put(3, "Anuj");
+        hmap.put(3, "Anuj");
+        System.out.println("here is list:"+hmap);
 
 
     }
+
     }
 
 

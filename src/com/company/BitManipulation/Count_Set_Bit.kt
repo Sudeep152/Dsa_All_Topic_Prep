@@ -3,6 +3,9 @@ package com.company.BitManipulation
 fun main(){
 
 
+
+
+
     print(nCountSetBit(0))
 
 }
