@@ -6,90 +6,37 @@ public class Main {
 
     public static void main(String[] args) {
 
-       System.out.println(advance_eculiden_Gcd(4,6));
+
+        System.out.println(prime(5));
+
+        System.out.println();
+
 
     }
-    static  int revNumber(int n){
-        int rev=0;
-        int rem=0;
-        while (n>0){
-            rev = n%10;
-            rem= rem*10+rev;
-            n=n/10;
+    public static boolean prime(int n){
+
+        //Write your code here
+        //returns a boolean value
+
+        if(n==1){
+            return false;
         }
-        return rem;
-    }
-
-    static int countdig(int n){
-        int count=0;
-
-        while (n>0){
-
-            count++;
-            n=n/10;
-
+        if(n==2  || n==3){
+            return true;
         }
-        return count;
-    }
-
-    static int factorial(int n){
-        int fact=1;
-        for (int i=1;i<=n;i++){
-            fact=fact*i;
-        }
-        return fact;
-    }
-
-    static  int trailingZero(int n){
-        int count=0;
-        for (int i=5;i<=n;i=i*5){
-
-            count=count+ n/i;
+        if(n%2==0 || n%3==0){
+            return false;
         }
 
-  return count;
-    }
+        for(int i=5;i<=n;i=i*5){
 
-
-    static  int Naive_GCD(int a,int b){
-
-        int min = Math.min(a,b);
-
-        while (min % a==0 || min %b==0){
-            break;
-        }
-        return min;
-    }
-
-    static int eculidean_GCD(int a,int b){
-
-        while (a!=b){
-
-            if(a>b){
-                a=a-b;
-            }else {
-                b=b-a;
+            if(n%i == 0 || n%(i+2)==0){
+                return false;
             }
-
-
-        }
-        return a;
-
-    }
-
-
-    static  int advance_eculiden_Gcd(int a,int b){
-
-        if(b==0){
-            return  a;
+            return true;
         }
 
-        return advance_eculiden_Gcd(b,a%b);
-    }
-
-    static int LCM (int a,int b){
-
-        return a;
+        return true;
     }
 
 
