@@ -7,35 +7,45 @@ public class te {
     public static void main(String [] args){
 
 
-        int [] arr={28, 7, -36 ,21 ,-21, -50 ,9 ,-32}
-      ;
-      //  System.out.println(arr[4]);
-        int abs_val = Math.abs(arr[1]);
-        System.out.println(abs_val);
-        System.out.println(greaterNumber(arr, arr.length));
+        int [] arr={1,2,3,4,5};
+        int k=2;
+        System.out.println(countArray(arr,k));
+        System.out.println(countArray2nd(arr,k));
 
 
     }
-    static int missingNumber(int arr[], int size)
-    {
-        // Your code here
+    static int countArray(int [] arr,int k){
 
-        int great= greaterNumber(arr,size);
+        int count=0;
 
+        for (int i=arr.length-1;i>=0;i--){
 
-       return great++;
+            for (int j=i-1;j>=0;j--){
+                if (arr[i]-arr[j]==k){
+                    count++;
+                }
 
-    }
-    static int greaterNumber(int arr [],int n){
-
-
-        int max =0;
-        for (int i=0;i<n;i++){
-            if(arr[i]>max){
-                max= arr[i];
             }
-        }
 
-        return  max;
+        }
+        return count;
     }
+    static int countArray2nd(int [] arr,int k){
+
+        int count=0;
+        int cureentNo=0;
+        int prev=0;
+        for (int i=arr.length-1;i>=0;i--){
+
+            cureentNo=arr[i];
+            prev=arr[cureentNo-1];
+            if (cureentNo - prev ==k){
+                count++;
+            }
+
+
+        }
+        return count;
+    }
+
 }
