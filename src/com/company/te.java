@@ -1,51 +1,43 @@
 package com.company;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class te {
     public static void main(String [] args){
 
 
-        int [] arr={1,2,3,4,5};
-        int k=2;
-        System.out.println(countArray(arr,k));
-        System.out.println(countArray2nd(arr,k));
+int  []arr= {20,124,0,21,0,23,45};
+move(arr);
 
 
     }
-    static int countArray(int [] arr,int k){
+     static void move(int []  arr){
 
+        int n = arr.length;
         int count=0;
+         ArrayList<Integer> ar = new ArrayList<>();
+         for (int i=0;i<n;i++){
+             if(arr[i]==0){
+                 count++;
+             }
+             if(arr[i]!=0){
+                 ar.add(arr[i]);
 
-        for (int i=arr.length-1;i>=0;i--){
-
-            for (int j=i-1;j>=0;j--){
-                if (arr[i]-arr[j]==k){
-                    count++;
-                }
-
-            }
-
-        }
-        return count;
-    }
-    static int countArray2nd(int [] arr,int k){
-
-        int count=0;
-        int cureentNo=0;
-        int prev=0;
-        for (int i=arr.length-1;i>=0;i--){
-
-            cureentNo=arr[i];
-            prev=arr[cureentNo-1];
-            if (cureentNo - prev ==k){
-                count++;
-            }
+             }
+         }
 
 
-        }
-        return count;
-    }
+         for (int i=0;i<count;i++){
+             ar.add(0);
+         }
+
+
+         System.out.print(ar);
+
+
+
+     }
 
 }
