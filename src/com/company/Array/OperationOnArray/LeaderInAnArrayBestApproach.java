@@ -3,7 +3,7 @@ package com.company.Array.OperationOnArray;
 public class LeaderInAnArrayBestApproach {
     public static void main(String [] args){
 
-        int [] arr={7,10,4,3,6,5,2};
+        int [] arr={7,10,4,10,6,5,2};
         bestApproach(arr);
 
     }
