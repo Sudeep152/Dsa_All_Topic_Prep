@@ -10,6 +10,7 @@ public class Prime_Factors {
        int N= A.length;
 
 
+       System.out.print(Advanced_Prime(3));
 
    }
 

@@ -2,7 +2,7 @@ package com.company.SimpleMathMatics
 
 fun main (){
 
-    print(nonPrimeFactors(12))
+    print(nonPrimeFactors(18))
 }
 
 
