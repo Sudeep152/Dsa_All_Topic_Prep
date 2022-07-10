@@ -7,8 +7,8 @@ public class SecondLargestBestApp {
 
 
 
-        int []arr ={2,1,2};
-        System.out.println(AnotherMethod(arr));
+        int []arr ={2};
+        System.out.println(bestApproach(arr));
     }
 
     static int bestApproach(int [] arr){

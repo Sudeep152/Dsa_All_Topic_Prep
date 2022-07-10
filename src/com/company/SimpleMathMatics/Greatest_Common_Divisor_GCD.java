@@ -1,5 +1,7 @@
 package com.company.SimpleMathMatics;
 
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Greatest_Common_Divisor_GCD {
@@ -55,4 +57,11 @@ public class Greatest_Common_Divisor_GCD {
         }
         return GCD_ADVANCE_Approach(b,a%b);
     }
+    public static String findDay(int month, int day, int year) {
+
+        Calendar c = Calendar.getInstance();
+        c.set(year, month, day);
+        return LocalDate.of(year, month, day).getDayOfWeek().toString();
+    }
+
 }

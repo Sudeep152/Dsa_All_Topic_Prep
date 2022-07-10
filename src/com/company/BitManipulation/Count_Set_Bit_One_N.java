@@ -25,5 +25,6 @@ public class Count_Set_Bit_One_N {
             n=n&(n-1);
         }
     return count;
+
     }
 }
