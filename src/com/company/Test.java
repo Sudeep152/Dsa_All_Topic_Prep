@@ -1,21 +1,62 @@
 package com.company;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+
 public class Test {
+
     public static void main(String [] args){
 
+        Scanner sc= new Scanner(System.in);
 
-        int []  [] arr={{1,2,3},{1,2,3},{3,4,5}};
+        int T = sc.nextInt();
+        while(T-->0){
 
-        for (int i=0;i<arr.length;i++){
+            int A = sc.nextInt();
+            int B= sc.nextInt();
 
-            System.out.println();
-            for (int j=0;j<arr.length;j++){
-                System.out.print(arr[i][j]);
+            int small = Math.min(A,B);
+            int max =Math.max(A,B);
+
+
+            while(small<=max){
+
+                if(small == max){
+                    System.out.println("YES");
+                    break;
+                }else{
+                    small=small*2;
+                    if(small > max){
+                        break;
+                    }
+                }
+
             }
+
+
+            if (max <small){
+                System.out.println("NO");
+            }
+
+
 
         }
 
 
+
+
+
     }
 
-}
+
+
+
+
+
+
+
+
+
+    }
+
