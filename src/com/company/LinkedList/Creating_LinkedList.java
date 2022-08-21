@@ -8,7 +8,6 @@ public class Creating_LinkedList {
         int val ;
         Node next;
     }
-
     public  static class  MyLinkedList{
 
       protected     Node head;
@@ -152,7 +151,6 @@ public class Creating_LinkedList {
             }
 
        }
-
        private  Node getAtNode(int index){
             Node node = head;
             Node temp = new Node();
@@ -162,7 +160,6 @@ public class Creating_LinkedList {
             temp = node;
             return temp;
        }
-
        public  void  reverseLinkedList(){
             int li =0;
             int ri = size-1;
@@ -180,7 +177,6 @@ public class Creating_LinkedList {
             displayList();
 
        }
-
        public  void  reverseIP(){
 
             Node prev = null;
@@ -201,12 +197,47 @@ public class Creating_LinkedList {
 
 
        }
+       public  void  removeAt(int Index){
+            Node temp = head;
+
+            if(Index < 0  ){
+                System.out.println("List is empty");
+            }else if (Index ==0){
+                removeLast();
+            }else {
+                for (int i =0;i<Index-1;i++){
+                    temp= temp.next;
+                }
+
+                temp.next=temp.next.next;
+
+            }
+            displayList();
+
+
+       }
+
+       public int mid() {
+
+            Node slow = head;
+            Node fast =head;
+
+            while (fast.next !=null && fast.next.next!=null) {
+
+                slow=slow.next;
+                fast=fast.next.next;
+
+            }
+            return slow.val;
+
+       }
+
+
+
 
 
 
     }
-
-
     public  static  void  main(String [] args){
 
         MyLinkedList list = new MyLinkedList();
@@ -215,22 +246,29 @@ public class Creating_LinkedList {
         list.addLast(20);
         list.addLast(30);
         list.addLast(40);
+
         list.displayList();
 //
 //        list.displayList();
 //       System.out.print("List First Elements -> " +  list.getFirstEle() + "\n");
 //       System.out.println("List Second Elements -> " +list.getLastEle());
 //       list.getAtEle(5);
+//          list.setFirstELe(12);
+//          list.displayList();
+//          list.addAtIndex(22,0);
+//          list.displayList();
+//          list.removeLast();
+//          list.displayList();
+//          list.reverseLinkedList();
+//          list.reverseIP();
+//          list.removeAt(2);
 
 
-          list.setFirstELe(12);
-          list.displayList();
-          list.addAtIndex(22,0);
-          list.displayList();
-          list.removeLast();
-          list.displayList();
-          list.reverseLinkedList();
-          list.reverseIP();
+        System.out.println(list.mid());
+
 
     }
+
+
+
 }

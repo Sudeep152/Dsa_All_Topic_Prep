@@ -5,58 +5,32 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class Test {
+    public static void main(String[] args) {
 
-    public static void main(String [] args){
-
-        Scanner sc= new Scanner(System.in);
-
-        int T = sc.nextInt();
-        while(T-->0){
-
-            int A = sc.nextInt();
-            int B= sc.nextInt();
-
-            int small = Math.min(A,B);
-            int max =Math.max(A,B);
+        int [] arr ={1,2,3,4,5};
+        arraySign(arr,5);
 
 
-            while(small<=max){
+//
+    }
+     static void  arraySign(int[] nums,int s) {
 
-                if(small == max){
-                    System.out.println("YES");
-                    break;
-                }else{
-                    small=small*2;
-                    if(small > max){
-                        break;
-                    }
-                }
+        int n = nums.length;
+        int sum =0;
+        int iIndex=0;
+        int JIndex=0;
+        for (int i =0;i<n;i++){
 
+            while (sum!=s){
+                sum=sum+nums[i];
             }
-
-
-            if (max <small){
-                System.out.println("NO");
-            }
-
-
 
         }
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
+        System.out.println();
 
 
     }
 
+
+
+}
