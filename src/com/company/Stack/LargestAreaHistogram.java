@@ -5,7 +5,7 @@ import java.util.Stack;
 public class LargestAreaHistogram {
     public  static  void main(String [] args){
 
-        int [] arr= {1,2,2};
+        int [] arr= {1,8,6,2,5,4,8,3,7};
         System.out.println(LargestArea(arr));
 
 

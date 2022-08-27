@@ -5,54 +5,37 @@ import java.util.*;
 public class Vipin {
     public static void main(String[] args) {
 
-
-        String [] ops = {"1","C"};
-
-
-        calPoints(ops);
-
-
-
-    }
-
-
-    static int calPoints(String[] ops) {
-        int sum = 0;
-        Stack<Integer> stack = new Stack<>();
-        int n = ops.length;
-
-
-        for (int i = 0; i < n; i++) {
-
-            String  temp = ops[i];
-
-            if (temp.equals("D")) {
-                int dummy= 2*stack.peek();
-                stack.push(dummy);
-
-            } else if (temp.equals("C")) {
-
-                stack.pop();
-
-            } else if (temp.equals("+")) {
-                int last1 = stack.peek();
-                stack.pop();
-                int last2= stack.peek();
-                stack.push(last1);
-                stack.push(last1+last2);
-            } else {
-                int num = Integer.parseInt(temp);
-                stack.push(num);
+        Scanner s=new Scanner(System  .in);
+        int test=s.nextInt();
+        while(test-->0) {
+            int n=s.nextInt();
+            int []a=new int[n];
+            int []b=new int[n];
+            int i;
+            for(i=0;i<n;i++)
+            {
+                a[i]=s.nextInt();
             }
+            for(i=0;i<n;i++)
+            {
+                b[i]=s.nextInt();
+            }
+            int sum=0;
+            int diff=0;
+            for(i=0;i<n;i++)
+            { int x=a[i]-b[i];
+                diff+=x;
+                if(x>0)
+                    sum+=x;
 
+            }
+            if(diff==0)
+                System.out.println(sum);
+            else
+                System.out.println(-1);
 
         }
 
-        while (!stack.isEmpty()){
-            int last= stack.pop();
-            sum = sum+last;
-        }
-
-        return sum ;
     }
+
 }

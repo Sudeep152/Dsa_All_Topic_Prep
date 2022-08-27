@@ -3,40 +3,25 @@ package com.company;
 import java.util.ArrayList;
 
 public class QuestionSolve {
-    public static void main(String [] ars){
+    public static void main(String[] ars) {
 
-        int [] ar =
-                {1,2,3,4,5,6,7};
+      String []  strs = {"flower","flow","flight"};
 
-
-        rotate(ar,4);
-
-    }
-
-    static  void rotate(int[] nums, int k) {
-
-        int n = nums.length;
-        int []temp =new int[k];
-        ArrayList<Integer> arrayList= new ArrayList<>();
-
-        for (int i=0;i<k;i++) {
-            temp[i] = nums[k];
-            nums[k] = nums[i];
-        }
-        for (int i=0;i<k;i++){
-            arrayList.add(temp[i]);
-        }
-
-        for (int i=0;i<k;i++){
-            arrayList.add(nums[i]);
-        }
-
-        System.out.println( "\n"+arrayList);
-
-
-
+      System.out.println(longestCommonPrefix(strs));
 
     }
 
 
+   static public String longestCommonPrefix(String[] strs) {
+
+        if(strs.length == 0) return "";
+
+        String ans = strs[0];
+        for(int i=1;i<strs.length;i++){
+            while(strs[i].indexOf(ans) !=0){               // if ans string is not equal to the given string
+                ans = ans.substring(0,ans.length()-1);    //cut the string from end
+            }
+        }
+        return ans;
+    }
 }
