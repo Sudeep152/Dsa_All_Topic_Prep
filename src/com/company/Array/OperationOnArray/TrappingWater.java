@@ -4,7 +4,7 @@ public class TrappingWater {
 
    public static void main(String [] args){
 
-        int [] arr={1,8,6,2,5,4,8,3,7};
+        int [] arr={4,2,0,3,2,5};
 
    System.out.println(TappingWater(arr));
 
