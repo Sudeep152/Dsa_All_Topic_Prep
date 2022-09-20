@@ -9,7 +9,7 @@ public class StringSubsequence {
 
 
 
-        System.out.println(  gss("abc"));
+        System.out.println(  gss("abcdefghijklmnopqrstuvwxyz"));
 
 
 

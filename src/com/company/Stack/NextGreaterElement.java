@@ -3,7 +3,7 @@ package com.company.Stack;
 public class NextGreaterElement {
     public static void main(String [] args){
 
-        int [] arr ={3,10,4,2,1,2,6,1,7,2,9};
+        int [] arr ={1,2,3,4,5,6};
 
         arr = NGE_BruteForce(arr);
 

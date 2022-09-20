@@ -6,7 +6,7 @@ import java.util.concurrent.LinkedTransferQueue;
 public class NextGreaterElementtoright {
     public static void  main(String [] args){
 
-        int [] arr ={1,3,4,2};
+        int [] arr ={1,2,3,4,5};
         BruteForcengetr(arr);
         AdvMethod(arr);
 
@@ -17,7 +17,7 @@ public class NextGreaterElementtoright {
         for (int i=0;i<n;i++){
 
             for (int j=i;j<n;j++){
-                if(arr[i] < arr[j]){
+                if(arr[i] >arr[j]){
                     ans[i] = arr[j];
                     break;
                 }else {
@@ -42,7 +42,7 @@ public class NextGreaterElementtoright {
         stack.push(arr[n-1]);
         for(int i = n -2;i>=0;i--){
 
-            while (stack.size() > 0  && arr[i] >stack.peek()){
+            while (stack.size() > 0  && arr[i] <stack.peek()){
                 stack.pop();
             }
             if(stack.isEmpty()){
