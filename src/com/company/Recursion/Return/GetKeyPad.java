@@ -49,4 +49,24 @@ public class GetKeyPad {
 
 
     }
+
+
+    static void  getKeyPad(String question,String ans){
+
+
+        if(question.length()==0){
+            System.out.println(ans);
+            return;
+        }
+
+        char ch= question.charAt(0);
+        String smallQu = question.substring(1);
+
+        String codeIndexArray = codes[ch -'0'];
+
+        for(int i =0; i<codeIndexArray.length();i++){
+            char opt = codeIndexArray.charAt(i);
+            getKeyPad(smallQu,ans + opt);
+        }
+    }
 }
