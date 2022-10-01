@@ -8,6 +8,7 @@ public class PrintSubsequence {
     static void printSS(String str ,String ans){
 
         if (str.length()==0){
+            System.out.println(ans);
             return;
         }
 
