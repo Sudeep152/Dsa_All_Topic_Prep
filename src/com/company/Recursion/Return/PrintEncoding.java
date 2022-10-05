@@ -5,7 +5,7 @@ public class PrintEncoding {
 
     public  static  void main(String [] args){
 
-        EncodingPrint("1521","");
+        EncodingPrint("226","");
 
 
     }

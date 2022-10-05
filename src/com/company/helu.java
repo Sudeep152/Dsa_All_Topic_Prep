@@ -1,60 +1,39 @@
-package com.company;
-
-public class helu {
-    public static void main(String [] args){
-
-
-        System.out.println(odd(6713));
-
-    }
-    static int countSum(int n,int set){
-
-        int count=0;
-        int sum=0;
-        int i=0;
-
-        while (count!=n){
-            int temp =countSetBits(i);
-            if(temp==set){
-                count++;
-                sum= sum+i;
-            }
-            i++;
-        }
-
-        return sum;
-    }
-    static int countSetBits(int n)
-    {
-        int count = 0;
-        while (n > 0) {
-            n &= (n - 1);
-            count++;
-        }
-        return count;
-    }
-
-
-    static int odd(int num){
-
-        int oddSum=0;
-        int evenSum=0;
-        int max=1;
-        while (num!=0){
-            int id =num%10;
-            if(id%2==0){
-                evenSum=evenSum+id;
-            }
-            if(id%2!=0){
-                oddSum=oddSum+id;
-            }
-            num= num/10;
-
-
-        }
-        max=Math.max(oddSum,evenSum);
-        return max;
-
-    }
-
-}
+//package com.company;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//public class helu {
+//    public static void main(String [] args) {
+//
+//
+//        List<String> list= getAllPermutation("321");
+//        System.out.println(list);
+//
+//    }
+//
+//    public static List<String> getAllPermutation(String str){
+//
+//
+//
+//        if (str.length()==0){
+//            ArrayList<String> list= new ArrayList<>();
+//            list.add("");
+//            return list;
+//        }
+//
+//
+//        for(int i=0;i<str.length();i++){
+//            char f = str.charAt(i);
+//
+//            String leftPart = str.substring(0,i);
+//            String rightPart=str.substring(i+1);
+//            String merge= leftPart+rightPart;
+//            getAllPermutation(merge);
+//
+//        }
+//
+//
+//    }
+//
+//}
