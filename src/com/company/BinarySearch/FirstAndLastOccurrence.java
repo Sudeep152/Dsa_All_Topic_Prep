@@ -5,39 +5,58 @@ public class FirstAndLastOccurrence {
     public static  void main(String [] args){
 
         int [] arr = {2,4,10,10,10,18,20};
-        getFirstAndLast(arr,10);
+        int [] answer= searchRange(arr,10);
+        for (int i =0;i<answer.length;i++){
+            System.out.println(answer[i]);
+        }
     }
-     static  void getFirstAndLast(int []arr, int ele){
 
+    static public int[] searchRange(int[] nums, int target) {
+
+        int firstIndex =-1;
+        int lastIndex = -1;
         int start = 0;
-        int end = arr.length;
-        int firstIndex = 0;
-        int LastIndex=0;
+        int end = nums.length-1;
+        while(start<=end){
+            int mid=start +(end-start)/2;
 
-        while (start<=end){
-            int mid = start +(end-start)/2;
-            if (arr[ mid ] ==ele){
-                firstIndex = start+1+1;
+            if(nums[mid]==target){
+                firstIndex= mid;
                 end = mid-1;
-                LastIndex =
-                end-1+1;
-                ;
-                start= mid+1;
-
-            }else if(arr[mid]>ele){
-                end = mid-1;
-            }else {
-                start=mid+1;
+            }else if(nums[mid]>target){
+                end= mid-1;
+            }else{
+                start =mid+1;
             }
+        }
+        int start1 = 0;
+        int end1 = nums.length-1;
 
+        while(start1<=end1){
 
+            int mid=start1 +(end1-start1)/2;
+
+            if(nums[mid]==target){
+                lastIndex= mid;
+                start1 = mid+1;
+            }else if(nums[mid]>target){
+                end1= mid-1;
+            }else{
+                start1 =mid+1;
+            }
 
 
 
         }
 
 
-        System.out.println(firstIndex +" ,"+LastIndex);
-     }
+
+
+        int [] answer={firstIndex,lastIndex};
+
+        return answer;
+
+
+    }
 
 }
