@@ -1,39 +1,52 @@
 package com.company.DSAPLACEMENTSHEET;
 
-import java.util.Scanner;
-
 public class SetMatrixZero {
-    public  static  void main(String [] args){
+    public static void main(String[] args) {
 
-        int [][] matrix ={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+        int[][] matri = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
 
-        setZeroes(matrix);
-        Scanner sc = new
-                Scanner(System.in);
-        int x= sc.nextInt();
-        int y = sc.nextInt();
-        int z = sc.nextInt();
 
+        setZeroes(matri);
 
 
     }
-    public  static  void setZeroes(int[][] matrix) {
 
-        int row = matrix.length;;
-        int coloum = matrix[0].length;
+    public static void setZeroes(int[][] matrix) {
 
-        for(int i =0,j =0 ;i<row && j<coloum;j++){
-            if (matrix[i][j]==0){
-                System.out.println(i+ ","+j);
+        boolean col1 = false;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        for (int i = 0; i < rows; i++) {
+
+            if (matrix[i][0] == 0) {
+                col1 = true;
             }
+
+            for (int j = 1; j < cols; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+
+            }
+
         }
 
-        for(int i =0,j =0 ;i<row && j<coloum;i++){
-            if (matrix[i][j]==0){
-                System.out.println(i+ ","+j);
-            }
-        }
 
+        for (int i = rows - 1; i >= 0; i--) {
+            for (int j = cols - 1; j >= 1; j--) {
+                if (matrix[i][0] == 0 || matrix[0][j] == 0) {
+                    matrix[i][j] = 0;
+                }
+
+
+            }
+            if (col1) {
+                matrix[i][0] = 0;
+            }
+
+        }
 
     }
 }
