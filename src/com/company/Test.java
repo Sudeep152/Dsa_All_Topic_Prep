@@ -1,40 +1,78 @@
 package com.company;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int size1 = scn.nextInt();
-        String[] arr1 = new String[size1];
-        for(int i=0;i<size1;i++){
-            arr1[i]=scn.next();
-        }
-        int size2 = scn.nextInt();
-        String[] arr2 = new String[size2];
-        for(int i=0;i<size2;i++){
-            arr2[i]=scn.next();
-        }
-        String[] ans = new String[size1+size2];
-        check(arr1,arr2,size1,size2,ans);
-        for(int i=0;i<ans.length;i++){
-            System.out.print(ans[i]+" ");
-        }
-    }
-        public static void check(String[] arr1, String[] arr2, int n1, int n2, String[] arr3){
-            int i = 0, j = 0, k = 0;
-            while (i < n1 && j < n2)
-            {
-                arr3[k++] = arr1[i++];
-                arr3[k++] = arr2[j++];
-            }
-            while (i < n1)
-                arr3[k++] = arr1[i++];
-            while (j < n2)
-                arr3[k++] = arr2[j++];
-        }
 
+        t("“i.like.this.program.very.much");
+
+    }
+
+
+//    static void prCharWithFreq(String s) {
+//
+//        Map<Character, Integer> d = new HashMap<Character, Integer>();
+//
+//        main();
+//
+//        for(int i = 0; i < s.length(); i++)
+//        {
+//            if(d.containsKey(s.charAt(i)))
+//            {
+//                d.put(s.charAt(i), d.get(s.charAt(i)) + 1);
+//            }
+//            else
+//            {
+//                d.put(s.charAt(i), 1);
+//            }
+//        }
+//
+//        for(int i = 0; i < s.length(); i++)
+//        {
+//            if(d.get(s.charAt(i)) != 0)
+//            {
+//                System.out.print(s.charAt(i));
+//                System.out.print(d.get(s.charAt(i)) + " ");
+//                d.put(s.charAt(i), 0);
+//            }
+//        }
+//
+//
+//    }
+
+    static  void  t(String str){
+
+        String a=str;
+
+
+        String[]arr=a.split("\\.");
+
+
+        for(int i=0;i<=arr.length-1;i++){
+
+
+            if(i%2==1)
+                arr[i]="abc";
+
+        }
+        String rs="";
+
+
+        for(int i=0;i<arr.length-1;i++){
+
+            rs+=arr[i];
+
+            rs+=".";
+        }
+        rs+=arr[arr.length-1];
+
+        System.out.println(rs);
+
+    }
 }
 
 
