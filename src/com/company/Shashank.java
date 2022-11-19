@@ -1,38 +1,65 @@
 package com.company;
+import java.util.Scanner;
 
 public class Shashank {
-    public static void main(String[] args) {
+    public static  void main(){
+
+        Scanner sc= new Scanner(System.in);
+        String s = sc.next();
+        int n = s.length();
+
+        System.out.print(find_digit(s, n));
 
 
     }
-
-    void frequencyOfCharacters(String input) {
-        // TODO: Add code here
-        int b =0;
-        int f =0;
-        int j =0;
-        int p =0;
-        int v =0;
-        int other =0;
-
-        for(int i =0;  i<input.length();i++){
-
-            if(input.charAt(i) =='b') b++;
-            else if(input.charAt(i)=='f')f++;
-            else if(input.charAt(i)=='j')j++;
-            else if(input.charAt(i)=='p')p++;
-            else if(input.charAt(i)=='v')v++;
-            else {
-                other++;
+    static int find_digit(String s, int n)
+    {
+        int first_digit = -1;
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (s.charAt(i) < '0' ||
+                    s.charAt(i) > '9')
+            {
+                first_digit = i;
+                break;
             }
         }
-        System.out.println('b'+" "+b);
-        System.out.println('f'+" "+f);
-        System.out.println('j'+" "+j);
-        System.out.println('p'+" "+p);
-        System.out.println('v'+" "+v);
-        System.out.println('o'+" "+other);
+        first_digit++;
 
+        int s_len = first_digit;
+
+        int num = 0, pw = 1;
+        int i = n - 1;
+        while (i >= 0)
+        {
+
+
+            if (s.charAt(i) >= '0' &&
+                    s.charAt(i) <= '9')
+            {
+
+
+                int digit = s.charAt(i) - '0';
+                num = num + (pw * digit);
+
+                if (num >= s_len)
+                    return -1;
+                pw = pw * 10;
+            }
+            i--;
+        }
+
+        num = num * 10;
+
+        int req = s_len - num;
+
+        if (req > 9 || req < 0)
+            return -1;
+        return req;
     }
 
+
 }
+
+
+

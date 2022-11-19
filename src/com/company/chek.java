@@ -1,40 +1,32 @@
 package com.company;
 
-public class chek {
-    public static void main(String [] args){
+import java.util.*;
 
+public class chek{
+    public static void main(String [] args) {
 
-        Audi audi = new Audi();
-        audi.start();
+        Scanner sc = new Scanner(System.in);
 
-    }
+        int no = sc.nextInt();
 
-    static class  s implements Phone{
+        int noRow, noCol, tempH = no * 2 - 1, numH = 1;
 
-        @Override
-        public void isone() {
+        for (noRow = 1; noRow <= tempH; noRow++)
+        {
+            for (noCol = 1; noCol <= tempH; noCol++)
+            {
+                if (noCol == noRow || noCol == tempH - noRow + 1)
+                    System.out.print(numH);
+                System.out.print("  ");
+            }
 
+            System.out.println();
+
+            numH = (noRow <= tempH / 2) ? ++numH : --numH;
         }
+
+
     }
 
-    static class  Audi extends Car{
-
-
-        @Override
-        void start() {
-          System.out.println("Start");
-        }
-    }
-
-  abstract  static class Car{
-
-        void start(){
-
-        }
-    }
-
-    interface  Phone{
-        void isone();
-    }
 }
 
