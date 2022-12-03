@@ -1,5 +1,5 @@
-package com.company.Tree;
-import  com.company.Tree.InOrderTraversal.TreeNode;
+package com.company.Tree.BinaryTree;
+import  com.company.Tree.BinaryTree.InOrderTraversal.TreeNode;
 
 public class PostOrder {
     public  static  void main(String [] args){

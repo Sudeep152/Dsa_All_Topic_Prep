@@ -1,4 +1,4 @@
-package com.company.Tree;
+package com.company.Tree.BinaryTree;
 
 public class Implimentation {
     public static void main(String[] args){

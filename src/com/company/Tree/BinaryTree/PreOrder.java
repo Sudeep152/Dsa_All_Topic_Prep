@@ -1,7 +1,6 @@
-package com.company.Tree;
+package com.company.Tree.BinaryTree;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PreOrder {
     public static  void main(String []args ){
