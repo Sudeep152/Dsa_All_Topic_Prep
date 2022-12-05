@@ -3,10 +3,10 @@ package com.company.Tree.OnlyTree;
 import java.util.ArrayList;
 
 public class TreeNode<T> {
-    public T data;
+    public int data;
     public ArrayList<TreeNode<T>> children;
 
-    public TreeNode(T data) {
+    public TreeNode(int data) {
         this.data = data;
         children = new ArrayList<>();
     }
